@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  profiles: default
+  application:
+    name: Oauth2 Resource server
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/oauth/token_key
+auth:
+  jwt:
+    public-key: classpath:rk-publickey.pem
